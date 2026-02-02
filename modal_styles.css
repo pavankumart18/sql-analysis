@@ -4,8 +4,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    /* Less opaque, more modern backdrop */
+    backdrop-filter: blur(8px);
     z-index: 2000;
     display: none;
     align-items: center;
@@ -16,15 +17,16 @@
 
 #modal-overlay.active {
     display: flex;
-    /* or block depending on inner centering */
     opacity: 1;
 }
 
 .modal-content {
-    background: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 12px;
+    background: var(--bs-body-bg);
+    /* Use theme background */
+    color: var(--text-primary);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
     width: 800px;
     max-width: 90%;
     max-height: 85vh;
@@ -32,7 +34,7 @@
     flex-direction: column;
     overflow: hidden;
     transform: scale(0.95);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #modal-overlay.active .modal-content {
@@ -40,9 +42,10 @@
 }
 
 .modal-header {
-    background: rgba(15, 23, 42, 0.5);
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bs-tertiary-bg);
+    /* Subtle contrast header */
+    padding: 1.25rem 1.75rem;
+    border-bottom: 1px solid var(--bs-border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,17 +53,20 @@
 
 .modal-header h3 {
     margin: 0;
-    color: var(--accent-color);
-    font-size: 1.1rem;
+    color: var(--bs-heading-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
 }
 
 .close-btn {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     cursor: pointer;
     line-height: 1;
+    transition: color 0.15s;
 }
 
 .close-btn:hover {
@@ -68,54 +74,60 @@
 }
 
 .modal-body {
-    padding: 1.5rem;
+    padding: 1.75rem;
     overflow-y: auto;
-    color: #e2e8f0;
+    color: var(--text-primary);
 }
 
 /* SQL Code Block */
 .sql-block {
-    background: #0f172a;
-    padding: 1rem;
-    border-radius: 6px;
-    font-family: 'Consolas', 'Monaco', monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    background: var(--bs-tertiary-bg);
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
     white-space: pre-wrap;
-    color: #a5b4fc;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    /* Pop color for code */
+    border: 1px solid var(--bs-border-color);
+    margin-bottom: 2rem;
 }
 
 .metadata-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--bs-border-color);
 }
 
 .meta-item label {
     display: block;
     color: var(--text-secondary);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
 }
 
 .meta-item div {
-    font-weight: 500;
-    color: var(--text-primary);
+    font-weight: 600;
+    color: var(--bs-heading-color);
+    font-size: 0.95rem;
 }
 
 /* Section B Enhancements */
 .tech-tag {
     display: inline-block;
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--accent-color);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
     margin-top: 4px;
-    font-family: monospace;
+    font-family: var(--bs-font-sans-serif);
 }

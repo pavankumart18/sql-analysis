@@ -323,6 +323,9 @@ select {
     position: relative;
     background: var(--universe-bg);
     overflow: hidden;
+    min-height: 600px;
+    /* Safeguard minimum */
+    width: 100%;
 }
 
 /* Dots - Premium styling with smooth animations */
@@ -631,14 +634,15 @@ select {
     align-items: center;
     justify-content: space-between;
     overflow-x: auto;
-    padding-bottom: 20px;
+    overflow-y: visible;
+    padding: 10px 5px 20px 5px;
 }
 
 .pipeline-node {
     background: var(--panel-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 1rem;
+    border: 2px solid rgba(148, 163, 184, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
     min-width: 160px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -646,17 +650,19 @@ select {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .pipeline-node:hover {
     border-color: var(--accent-color);
     background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
 }
 
 .pipeline-node.active {
-    border-color: var(--accent-color);
-    background: rgba(56, 189, 248, 0.2);
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    border: 2px solid var(--accent-color);
+    background: rgba(56, 189, 248, 0.15);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
     transform: translateY(-2px);
 }
 
@@ -676,20 +682,19 @@ select {
 /* Light Theme Pipeline Overrides */
 [data-bs-theme="light"] .pipeline-node {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    border: 2px solid #cbd5e1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 [data-bs-theme="light"] .pipeline-node:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
 }
 
 [data-bs-theme="light"] .pipeline-node.active {
     background: #f0f9ff;
-    /* Sky-50 */
-    border-color: var(--accent-color);
-    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.15);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2);
 }
 
 [data-bs-theme="light"] .pipeline-arrow {

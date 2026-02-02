@@ -1,32 +1,277 @@
 const APP_AGGREGATES = {
   "sql_distribution_summary": [
     {
-      "frequency_bucket": "adhoc",
+      "frequency_bucket": "3 (Medium)",
       "query_family": "Daily Monitoring",
       "primary_kpi_family": "Revenue",
-      "sql_count": 530,
-      "total_executions": 530
+      "sql_count": 78,
+      "total_executions": 1162
     },
     {
-      "frequency_bucket": "adhoc",
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Daily Monitoring",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 214,
+      "total_executions": 322
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Daily Monitoring",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 161,
+      "total_executions": 876
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Daily Monitoring",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 30,
+      "total_executions": 8433
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Daily Monitoring",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 47,
+      "total_executions": 1791
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
       "query_family": "Adhoc Investigation",
-      "primary_kpi_family": "Volume",
-      "sql_count": 850,
-      "total_executions": 850
+      "primary_kpi_family": "Attendance",
+      "sql_count": 44,
+      "total_executions": 640
     },
     {
-      "frequency_bucket": "adhoc",
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Attendance",
+      "sql_count": 104,
+      "total_executions": 153
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Attendance",
+      "sql_count": 77,
+      "total_executions": 433
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Attendance",
+      "sql_count": 40,
+      "total_executions": 1400
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Attendance",
+      "sql_count": 8,
+      "total_executions": 2604
+    },
+    {
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 201,
+      "total_executions": 299
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 96,
+      "total_executions": 1351
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 60,
+      "total_executions": 2115
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 154,
+      "total_executions": 872
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 26,
+      "total_executions": 8584
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
       "query_family": "Channel Analysis",
-      "primary_kpi_family": "Volume",
-      "sql_count": 81,
-      "total_executions": 81
+      "primary_kpi_family": "Revenue",
+      "sql_count": 12,
+      "total_executions": 160
     },
     {
-      "frequency_bucket": "adhoc",
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Channel Analysis",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 31,
+      "total_executions": 48
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Channel Analysis",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 6,
+      "total_executions": 1531
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Channel Analysis",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 24,
+      "total_executions": 143
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Channel Analysis",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 8,
+      "total_executions": 284
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
       "query_family": "Segment Analysis",
-      "primary_kpi_family": "Volume",
-      "sql_count": 39,
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 3,
+      "total_executions": 663
+    },
+    {
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Segment Analysis",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 17,
+      "total_executions": 26
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Segment Analysis",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 6,
+      "total_executions": 229
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Segment Analysis",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 7,
       "total_executions": 39
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Engagement",
+      "sql_count": 2,
+      "total_executions": 32
+    },
+    {
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 6,
+      "total_executions": 11
+    },
+    {
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Operations",
+      "sql_count": 3,
+      "total_executions": 5
+    },
+    {
+      "frequency_bucket": "1 (Rare)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Engagement",
+      "sql_count": 6,
+      "total_executions": 9
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Operations",
+      "sql_count": 2,
+      "total_executions": 87
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
+      "query_family": "Segment Analysis",
+      "primary_kpi_family": "Efficiency",
+      "sql_count": 6,
+      "total_executions": 99
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Engagement",
+      "sql_count": 1,
+      "total_executions": 183
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 1,
+      "total_executions": 371
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 6,
+      "total_executions": 35
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Engagement",
+      "sql_count": 4,
+      "total_executions": 181
+    },
+    {
+      "frequency_bucket": "5 (Critical)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Operations",
+      "sql_count": 2,
+      "total_executions": 294
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 2,
+      "total_executions": 31
+    },
+    {
+      "frequency_bucket": "4 (High)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Revenue",
+      "sql_count": 1,
+      "total_executions": 30
+    },
+    {
+      "frequency_bucket": "3 (Medium)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Operations",
+      "sql_count": 2,
+      "total_executions": 28
+    },
+    {
+      "frequency_bucket": "2 (Low)",
+      "query_family": "Adhoc Investigation",
+      "primary_kpi_family": "Engagement",
+      "sql_count": 2,
+      "total_executions": 12
     }
   ],
   "query_shape_patterns": [
@@ -10514,37 +10759,37 @@ const APP_AGGREGATES = {
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer",
       "sql_count": 257,
-      "execution_weighted_count": 257
+      "execution_weighted_count": 6723
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000031",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000085",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000088",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 16
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000089",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 12
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000100",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 20
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000102",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000110",
@@ -10554,87 +10799,87 @@ const APP_AGGREGATES = {
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000116",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000128",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000132",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000137",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 10
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000157",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 15
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000170",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 6
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000182",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000191",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000207",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000210",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 338
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales",
       "sql_count": 221,
-      "execution_weighted_count": 221
+      "execution_weighted_count": 4418
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000247",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 41
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000267",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 14
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000282",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 22
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000292",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 19
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000308",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000309",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 8
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000315",
@@ -10654,42 +10899,42 @@ const APP_AGGREGATES = {
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000325",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 8
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000330",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000336",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000355",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 34
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000367",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 30
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000372",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000384",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000387",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 379
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000389",
@@ -10699,62 +10944,62 @@ const APP_AGGREGATES = {
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000395",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 11
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000397",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales",
       "sql_count": 234,
-      "execution_weighted_count": 234
+      "execution_weighted_count": 4783
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000423",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 9
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000455",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000456",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 41
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000461",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 38
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000473",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 50
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000474",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 22
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000506",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 34
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000511",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 22
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000519",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000541",
@@ -10764,32 +11009,32 @@ const APP_AGGREGATES = {
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000570",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "raw_digital_events + tmp_e000615",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "raw_digital_events + tmp_e000618",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 12
     },
     {
       "join_signature": "raw_digital_events + tmp_e000620",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 29
     },
     {
       "join_signature": "raw_digital_events + tmp_e000623",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 12
     },
     {
       "join_signature": "raw_digital_events + tmp_e000624",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 358
     },
     {
       "join_signature": "raw_digital_events + tmp_e000634",
@@ -10799,52 +11044,52 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_digital_events + tmp_e000635",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "raw_digital_events + tmp_e000638",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 8
     },
     {
       "join_signature": "raw_digital_events + tmp_e000645",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 6
     },
     {
       "join_signature": "raw_digital_events + tmp_e000657",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "raw_digital_events + tmp_e000687",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e000725",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales",
       "sql_count": 128,
-      "execution_weighted_count": 128
+      "execution_weighted_count": 3237
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e000743",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e000746",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 19
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e000752",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 29
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e000765",
@@ -10854,7 +11099,7 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e000766",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 190
     },
     {
       "join_signature": "support_tickets + tmp_e000779",
@@ -10864,7 +11109,7 @@ const APP_AGGREGATES = {
     {
       "join_signature": "support_tickets + tmp_e000792",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 9
     },
     {
       "join_signature": "support_tickets + tmp_e000802",
@@ -10874,72 +11119,72 @@ const APP_AGGREGATES = {
     {
       "join_signature": "marketing_touches + raw_ticket_sales",
       "sql_count": 73,
-      "execution_weighted_count": 73
+      "execution_weighted_count": 2108
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000808",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000821",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 32
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000830",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 8
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000831",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000835",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000839",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e000840",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "crm_deals + tmp_e000854",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000900",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 19
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000914",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e000922",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 10
     },
     {
       "join_signature": "raw_digital_events + tmp_e000932",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 19
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000958",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e000969",
@@ -10949,22 +11194,22 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_digital_events + tmp_e000973",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 6
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000989",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001001",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "raw_digital_events + tmp_e001004",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 6
     },
     {
       "join_signature": "support_tickets + tmp_e001010",
@@ -10974,12 +11219,12 @@ const APP_AGGREGATES = {
     {
       "join_signature": "crm_deals + tmp_e001021",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001035",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e001055",
@@ -10989,7 +11234,7 @@ const APP_AGGREGATES = {
     {
       "join_signature": "crm_deals + tmp_e001060",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001061",
@@ -11004,7 +11249,7 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_ticket_sales + tmp_e001107",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001112",
@@ -11014,27 +11259,27 @@ const APP_AGGREGATES = {
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001130",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 11
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e001132",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "support_tickets + tmp_e001135",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001137",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "raw_digital_events + tmp_e001163",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001171",
@@ -11044,22 +11289,22 @@ const APP_AGGREGATES = {
     {
       "join_signature": "marketing_touches + raw_ticket_sales + tmp_e001177",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e001200",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001238",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "support_tickets + tmp_e001240",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001247",
@@ -11069,17 +11314,17 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_digital_events + tmp_e001254",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001267",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 365
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e001277",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001290",
@@ -11089,32 +11334,32 @@ const APP_AGGREGATES = {
     {
       "join_signature": "crm_deals + tmp_e001292",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 15
     },
     {
       "join_signature": "support_tickets + tmp_e001306",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e001308",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "raw_digital_events + tmp_e001327",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e001334",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 3
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e001348",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 7
     },
     {
       "join_signature": "crm_deals + tmp_e001349",
@@ -11124,32 +11369,32 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e001356",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e001373",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "raw_digital_events + tmp_e001387",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 118
     },
     {
       "join_signature": "raw_ticket_sales + tmp_e001388",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 24
     },
     {
       "join_signature": "crm_deals + tmp_e001402",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "dim_customer + raw_ticket_sales + tmp_e001404",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     },
     {
       "join_signature": "raw_digital_events + tmp_e001409",
@@ -11159,12 +11404,12 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_digital_events + tmp_e001421",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 4
     },
     {
       "join_signature": "raw_digital_events + tmp_e001446",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 5
     },
     {
       "join_signature": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001447",
@@ -11174,150 +11419,150 @@ const APP_AGGREGATES = {
     {
       "join_signature": "raw_merch_orders + raw_ticket_sales + tmp_e001459",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 8
     },
     {
       "join_signature": "raw_digital_events + tmp_e001463",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 35
     },
     {
       "join_signature": "raw_digital_events + tmp_e001487",
       "sql_count": 1,
-      "execution_weighted_count": 1
+      "execution_weighted_count": 2
     }
   ],
   "kpi_expression_reuse": [
     {
       "kpi_expression": "gross_revenue",
       "sql_count": 530,
-      "execution_weighted_count": 530,
+      "execution_weighted_count": 12584,
       "analyst_count": 5
     },
     {
       "kpi_expression": "net_revenue",
       "sql_count": 530,
-      "execution_weighted_count": 530,
+      "execution_weighted_count": 12584,
       "analyst_count": 5
     },
     {
       "kpi_expression": "tickets_sold",
       "sql_count": 629,
-      "execution_weighted_count": 629,
+      "execution_weighted_count": 15030,
       "analyst_count": 5
     },
     {
       "kpi_expression": "tickets",
       "sql_count": 370,
-      "execution_weighted_count": 370,
+      "execution_weighted_count": 7481,
       "analyst_count": 5
     },
     {
       "kpi_expression": "attended",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "analyst_count": 5
     },
     {
       "kpi_expression": "attendance_rate",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "analyst_count": 5
     },
     {
       "kpi_expression": "sessions",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_expression": "sessions_with_purchase",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_expression": "session_conversion_rate",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_expression": "refunded_tickets",
       "sql_count": 119,
-      "execution_weighted_count": 119,
+      "execution_weighted_count": 2447,
       "analyst_count": 5
     },
     {
       "kpi_expression": "refund_rate",
       "sql_count": 119,
-      "execution_weighted_count": 119,
+      "execution_weighted_count": 2447,
       "analyst_count": 5
     },
     {
       "kpi_expression": "tickets_with_merch",
       "sql_count": 99,
-      "execution_weighted_count": 99,
+      "execution_weighted_count": 2446,
       "analyst_count": 5
     },
     {
       "kpi_expression": "merch_attach_rate",
       "sql_count": 99,
-      "execution_weighted_count": 99,
+      "execution_weighted_count": 2446,
       "analyst_count": 5
     },
     {
       "kpi_expression": "resolved_tickets",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_expression": "avg_resolution_hours",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_expression": "p90_resolution_hours",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_expression": "attributed_tickets",
       "sql_count": 81,
-      "execution_weighted_count": 81,
+      "execution_weighted_count": 2166,
       "analyst_count": 5
     },
     {
       "kpi_expression": "attributed_net_revenue",
       "sql_count": 81,
-      "execution_weighted_count": 81,
+      "execution_weighted_count": 2166,
       "analyst_count": 5
     },
     {
       "kpi_expression": "customers",
       "sql_count": 39,
-      "execution_weighted_count": 39,
+      "execution_weighted_count": 1056,
       "analyst_count": 5
     },
     {
       "kpi_expression": "avg_value",
       "sql_count": 39,
-      "execution_weighted_count": 39,
+      "execution_weighted_count": 1056,
       "analyst_count": 5
     },
     {
       "kpi_expression": "deals_created",
       "sql_count": 66,
-      "execution_weighted_count": 66,
+      "execution_weighted_count": 1537,
       "analyst_count": 5
     },
     {
       "kpi_expression": "pipeline_amount",
       "sql_count": 66,
-      "execution_weighted_count": 66,
+      "execution_weighted_count": 1537,
       "analyst_count": 5
     }
   ],
@@ -11326,216 +11571,231 @@ const APP_AGGREGATES = {
       "kpi_name": "gross_revenue",
       "kpi_family": "Revenue",
       "sql_count": 530,
-      "execution_weighted_count": 530,
+      "execution_weighted_count": 12584,
       "analyst_count": 5
     },
     {
       "kpi_name": "net_revenue",
       "kpi_family": "Revenue",
       "sql_count": 530,
-      "execution_weighted_count": 530,
+      "execution_weighted_count": 12584,
       "analyst_count": 5
     },
     {
       "kpi_name": "tickets_sold",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 629,
-      "execution_weighted_count": 629,
+      "execution_weighted_count": 15030,
       "analyst_count": 5
     },
     {
       "kpi_name": "tickets",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 370,
-      "execution_weighted_count": 370,
+      "execution_weighted_count": 7481,
       "analyst_count": 5
     },
     {
       "kpi_name": "attended",
-      "kpi_family": "Volume",
+      "kpi_family": "Attendance",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "analyst_count": 5
     },
     {
       "kpi_name": "attendance_rate",
-      "kpi_family": "Volume",
+      "kpi_family": "Attendance",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "analyst_count": 5
     },
     {
       "kpi_name": "sessions",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_name": "sessions_with_purchase",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_name": "session_conversion_rate",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "analyst_count": 5
     },
     {
       "kpi_name": "refunded_tickets",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 119,
-      "execution_weighted_count": 119,
+      "execution_weighted_count": 2447,
       "analyst_count": 5
     },
     {
       "kpi_name": "refund_rate",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 119,
-      "execution_weighted_count": 119,
+      "execution_weighted_count": 2447,
       "analyst_count": 5
     },
     {
       "kpi_name": "tickets_with_merch",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 99,
-      "execution_weighted_count": 99,
+      "execution_weighted_count": 2446,
       "analyst_count": 5
     },
     {
       "kpi_name": "merch_attach_rate",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 99,
-      "execution_weighted_count": 99,
+      "execution_weighted_count": 2446,
       "analyst_count": 5
     },
     {
       "kpi_name": "resolved_tickets",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_name": "avg_resolution_hours",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_name": "p90_resolution_hours",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "analyst_count": 5
     },
     {
       "kpi_name": "attributed_tickets",
-      "kpi_family": "Volume",
+      "kpi_family": "Revenue",
       "sql_count": 81,
-      "execution_weighted_count": 81,
+      "execution_weighted_count": 2166,
       "analyst_count": 5
     },
     {
       "kpi_name": "attributed_net_revenue",
-      "kpi_family": "Volume",
+      "kpi_family": "Revenue",
       "sql_count": 81,
-      "execution_weighted_count": 81,
+      "execution_weighted_count": 2166,
       "analyst_count": 5
     },
     {
       "kpi_name": "customers",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 39,
-      "execution_weighted_count": 39,
+      "execution_weighted_count": 1056,
       "analyst_count": 5
     },
     {
       "kpi_name": "avg_value",
-      "kpi_family": "Volume",
+      "kpi_family": "Efficiency",
       "sql_count": 39,
-      "execution_weighted_count": 39,
+      "execution_weighted_count": 1056,
       "analyst_count": 5
     },
     {
       "kpi_name": "deals_created",
-      "kpi_family": "Volume",
+      "kpi_family": "Attendance",
       "sql_count": 66,
-      "execution_weighted_count": 66,
+      "execution_weighted_count": 1537,
       "analyst_count": 5
     },
     {
       "kpi_name": "pipeline_amount",
-      "kpi_family": "Volume",
+      "kpi_family": "Attendance",
       "sql_count": 66,
-      "execution_weighted_count": 66,
+      "execution_weighted_count": 1537,
       "analyst_count": 5
     }
   ],
   "kpi_family_summary": [
     {
       "kpi_family": "Revenue",
-      "sql_count": 530,
-      "execution_weighted_count": 530
+      "sql_count": 627,
+      "execution_weighted_count": 15228
     },
     {
-      "kpi_family": "Volume",
-      "sql_count": 970,
-      "execution_weighted_count": 970
+      "kpi_family": "Attendance",
+      "sql_count": 273,
+      "execution_weighted_count": 5230
+    },
+    {
+      "kpi_family": "Efficiency",
+      "sql_count": 576,
+      "execution_weighted_count": 14277
+    },
+    {
+      "kpi_family": "Engagement",
+      "sql_count": 15,
+      "execution_weighted_count": 417
+    },
+    {
+      "kpi_family": "Operations",
+      "sql_count": 9,
+      "execution_weighted_count": 414
     }
   ],
   "table_dominance": [
     {
       "table_name": "analytics.vw_ticket_sales_enriched",
       "sql_count": 284,
-      "execution_weighted_count": 284,
+      "execution_weighted_count": 7571,
       "avg_complexity": 6.3
     },
     {
       "table_name": "dim_customer",
       "sql_count": 530,
-      "execution_weighted_count": 530,
+      "execution_weighted_count": 12584,
       "avg_complexity": 6.3
     },
     {
       "table_name": "tmp_e000031",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000085",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000088",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 16,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000089",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 12,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000100",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 20,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000102",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 9.0
     },
     {
@@ -11547,103 +11807,103 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000116",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000128",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000132",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000137",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 10,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000157",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 15,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000170",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 6,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000182",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000191",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000207",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000210",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 338,
       "avg_complexity": 9.0
     },
     {
       "table_name": "raw_ticket_sales",
       "sql_count": 835,
-      "execution_weighted_count": 835,
+      "execution_weighted_count": 18162,
       "avg_complexity": 6.4
     },
     {
       "table_name": "tmp_e000247",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 41,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000267",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 14,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000282",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 22,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000292",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 19,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000308",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000309",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 8,
       "avg_complexity": 9.0
     },
     {
@@ -11667,49 +11927,49 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000325",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 8,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000330",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000336",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000355",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 34,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000367",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 30,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000372",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000384",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000387",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 379,
       "avg_complexity": 9.0
     },
     {
@@ -11721,79 +11981,79 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000395",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 11,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000397",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 9.0
     },
     {
       "table_name": "dim_event",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "avg_complexity": 9.2
     },
     {
       "table_name": "raw_attendance_scans",
       "sql_count": 251,
-      "execution_weighted_count": 251,
+      "execution_weighted_count": 5034,
       "avg_complexity": 9.2
     },
     {
       "table_name": "tmp_e000423",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 9,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000455",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000456",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 41,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000461",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 38,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000473",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 50,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000474",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 22,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000506",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 34,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000511",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 22,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e000519",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 12.0
     },
     {
@@ -11805,43 +12065,43 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000570",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 12.0
     },
     {
       "table_name": "raw_digital_events",
       "sql_count": 219,
-      "execution_weighted_count": 219,
+      "execution_weighted_count": 6855,
       "avg_complexity": 3.3
     },
     {
       "table_name": "tmp_e000615",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000618",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 12,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000620",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 29,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000623",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 12,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000624",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 358,
       "avg_complexity": 6.0
     },
     {
@@ -11853,61 +12113,61 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000635",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000638",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 8,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000645",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 6,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000657",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000687",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000725",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 6.0
     },
     {
       "table_name": "raw_merch_orders",
       "sql_count": 138,
-      "execution_weighted_count": 138,
+      "execution_weighted_count": 3502,
       "avg_complexity": 5.6
     },
     {
       "table_name": "tmp_e000743",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000746",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 19,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000752",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 29,
       "avg_complexity": 9.0
     },
     {
@@ -11919,13 +12179,13 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000766",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 190,
       "avg_complexity": 9.0
     },
     {
       "table_name": "support_tickets",
       "sql_count": 96,
-      "execution_weighted_count": 96,
+      "execution_weighted_count": 1441,
       "avg_complexity": 3.2
     },
     {
@@ -11937,7 +12197,7 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000792",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 9,
       "avg_complexity": 6.0
     },
     {
@@ -11949,91 +12209,91 @@ const APP_AGGREGATES = {
     {
       "table_name": "marketing_touches",
       "sql_count": 81,
-      "execution_weighted_count": 81,
+      "execution_weighted_count": 2166,
       "avg_complexity": 4.2
     },
     {
       "table_name": "tmp_e000808",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000821",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 32,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000830",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 8,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000831",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000835",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000839",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000840",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
       "table_name": "crm_deals",
       "sql_count": 66,
-      "execution_weighted_count": 66,
+      "execution_weighted_count": 1537,
       "avg_complexity": 2.2
     },
     {
       "table_name": "tmp_e000854",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 4.0
     },
     {
       "table_name": "tmp_e000900",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 19,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000914",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e000922",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 10,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000932",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 19,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000958",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
@@ -12045,25 +12305,25 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e000973",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 6,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e000989",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e001001",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e001004",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 6,
       "avg_complexity": 6.0
     },
     {
@@ -12075,13 +12335,13 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001021",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 4.0
     },
     {
       "table_name": "tmp_e001035",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 12.0
     },
     {
@@ -12093,7 +12353,7 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001060",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 4.0
     },
     {
@@ -12111,7 +12371,7 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001107",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 6.0
     },
     {
@@ -12123,31 +12383,31 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001130",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 11,
       "avg_complexity": 12.0
     },
     {
       "table_name": "tmp_e001132",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001135",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001137",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001163",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
@@ -12159,25 +12419,25 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001177",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001200",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001238",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001240",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     },
     {
@@ -12189,19 +12449,19 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001254",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001267",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 365,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001277",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 6.0
     },
     {
@@ -12213,37 +12473,37 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001292",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 15,
       "avg_complexity": 4.0
     },
     {
       "table_name": "tmp_e001306",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001308",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001327",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001334",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 3,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001348",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 7,
       "avg_complexity": 6.0
     },
     {
@@ -12255,37 +12515,37 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001356",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001373",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001387",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 118,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001388",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 24,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001402",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 4.0
     },
     {
       "table_name": "tmp_e001404",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 9.0
     },
     {
@@ -12297,13 +12557,13 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001421",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 4,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001446",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 5,
       "avg_complexity": 6.0
     },
     {
@@ -12315,19 +12575,19 @@ const APP_AGGREGATES = {
     {
       "table_name": "tmp_e001459",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 8,
       "avg_complexity": 9.0
     },
     {
       "table_name": "tmp_e001463",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 35,
       "avg_complexity": 6.0
     },
     {
       "table_name": "tmp_e001487",
       "sql_count": 1,
-      "execution_weighted_count": 1,
+      "execution_weighted_count": 2,
       "avg_complexity": 6.0
     }
   ],
@@ -12335,1158 +12595,1158 @@ const APP_AGGREGATES = {
     {
       "type": "KPI",
       "name": "tickets_sold",
-      "execution_weighted_count": 629,
-      "share_of_total_workload": 0.4193
+      "execution_weighted_count": 15030,
+      "share_of_total_workload": 0.4226
     },
     {
       "type": "KPI",
       "name": "gross_revenue",
-      "execution_weighted_count": 530,
-      "share_of_total_workload": 0.3533
+      "execution_weighted_count": 12584,
+      "share_of_total_workload": 0.3538
     },
     {
       "type": "KPI",
       "name": "net_revenue",
-      "execution_weighted_count": 530,
-      "share_of_total_workload": 0.3533
+      "execution_weighted_count": 12584,
+      "share_of_total_workload": 0.3538
     },
     {
       "type": "KPI",
       "name": "tickets",
-      "execution_weighted_count": 370,
-      "share_of_total_workload": 0.2467
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer",
-      "execution_weighted_count": 257,
-      "share_of_total_workload": 0.1713
-    },
-    {
-      "type": "KPI",
-      "name": "attended",
-      "execution_weighted_count": 251,
-      "share_of_total_workload": 0.1673
-    },
-    {
-      "type": "KPI",
-      "name": "attendance_rate",
-      "execution_weighted_count": 251,
-      "share_of_total_workload": 0.1673
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales",
-      "execution_weighted_count": 234,
-      "share_of_total_workload": 0.156
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales",
-      "execution_weighted_count": 221,
-      "share_of_total_workload": 0.1473
+      "execution_weighted_count": 7481,
+      "share_of_total_workload": 0.2103
     },
     {
       "type": "KPI",
       "name": "sessions",
-      "execution_weighted_count": 219,
-      "share_of_total_workload": 0.146
+      "execution_weighted_count": 6855,
+      "share_of_total_workload": 0.1927
     },
     {
       "type": "KPI",
       "name": "sessions_with_purchase",
-      "execution_weighted_count": 219,
-      "share_of_total_workload": 0.146
+      "execution_weighted_count": 6855,
+      "share_of_total_workload": 0.1927
     },
     {
       "type": "KPI",
       "name": "session_conversion_rate",
-      "execution_weighted_count": 219,
-      "share_of_total_workload": 0.146
+      "execution_weighted_count": 6855,
+      "share_of_total_workload": 0.1927
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer",
+      "execution_weighted_count": 6723,
+      "share_of_total_workload": 0.189
+    },
+    {
+      "type": "KPI",
+      "name": "attended",
+      "execution_weighted_count": 5034,
+      "share_of_total_workload": 0.1415
+    },
+    {
+      "type": "KPI",
+      "name": "attendance_rate",
+      "execution_weighted_count": 5034,
+      "share_of_total_workload": 0.1415
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales",
+      "execution_weighted_count": 4783,
+      "share_of_total_workload": 0.1345
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales",
+      "execution_weighted_count": 4418,
+      "share_of_total_workload": 0.1242
     },
     {
       "type": "Join",
       "name": "raw_merch_orders + raw_ticket_sales",
-      "execution_weighted_count": 128,
-      "share_of_total_workload": 0.0853
+      "execution_weighted_count": 3237,
+      "share_of_total_workload": 0.091
     },
     {
       "type": "KPI",
       "name": "refunded_tickets",
-      "execution_weighted_count": 119,
-      "share_of_total_workload": 0.0793
+      "execution_weighted_count": 2447,
+      "share_of_total_workload": 0.0688
     },
     {
       "type": "KPI",
       "name": "refund_rate",
-      "execution_weighted_count": 119,
-      "share_of_total_workload": 0.0793
+      "execution_weighted_count": 2447,
+      "share_of_total_workload": 0.0688
     },
     {
       "type": "KPI",
       "name": "tickets_with_merch",
-      "execution_weighted_count": 99,
-      "share_of_total_workload": 0.066
+      "execution_weighted_count": 2446,
+      "share_of_total_workload": 0.0688
     },
     {
       "type": "KPI",
       "name": "merch_attach_rate",
-      "execution_weighted_count": 99,
-      "share_of_total_workload": 0.066
-    },
-    {
-      "type": "KPI",
-      "name": "resolved_tickets",
-      "execution_weighted_count": 96,
-      "share_of_total_workload": 0.064
-    },
-    {
-      "type": "KPI",
-      "name": "avg_resolution_hours",
-      "execution_weighted_count": 96,
-      "share_of_total_workload": 0.064
-    },
-    {
-      "type": "KPI",
-      "name": "p90_resolution_hours",
-      "execution_weighted_count": 96,
-      "share_of_total_workload": 0.064
+      "execution_weighted_count": 2446,
+      "share_of_total_workload": 0.0688
     },
     {
       "type": "KPI",
       "name": "attributed_tickets",
-      "execution_weighted_count": 81,
-      "share_of_total_workload": 0.054
+      "execution_weighted_count": 2166,
+      "share_of_total_workload": 0.0609
     },
     {
       "type": "KPI",
       "name": "attributed_net_revenue",
-      "execution_weighted_count": 81,
-      "share_of_total_workload": 0.054
+      "execution_weighted_count": 2166,
+      "share_of_total_workload": 0.0609
     },
     {
       "type": "Join",
       "name": "marketing_touches + raw_ticket_sales",
-      "execution_weighted_count": 73,
-      "share_of_total_workload": 0.0487
+      "execution_weighted_count": 2108,
+      "share_of_total_workload": 0.0593
     },
     {
       "type": "KPI",
       "name": "deals_created",
-      "execution_weighted_count": 66,
-      "share_of_total_workload": 0.044
+      "execution_weighted_count": 1537,
+      "share_of_total_workload": 0.0432
     },
     {
       "type": "KPI",
       "name": "pipeline_amount",
-      "execution_weighted_count": 66,
-      "share_of_total_workload": 0.044
+      "execution_weighted_count": 1537,
+      "share_of_total_workload": 0.0432
+    },
+    {
+      "type": "KPI",
+      "name": "resolved_tickets",
+      "execution_weighted_count": 1441,
+      "share_of_total_workload": 0.0405
+    },
+    {
+      "type": "KPI",
+      "name": "avg_resolution_hours",
+      "execution_weighted_count": 1441,
+      "share_of_total_workload": 0.0405
+    },
+    {
+      "type": "KPI",
+      "name": "p90_resolution_hours",
+      "execution_weighted_count": 1441,
+      "share_of_total_workload": 0.0405
     },
     {
       "type": "KPI",
       "name": "customers",
-      "execution_weighted_count": 39,
-      "share_of_total_workload": 0.026
+      "execution_weighted_count": 1056,
+      "share_of_total_workload": 0.0297
     },
     {
       "type": "KPI",
       "name": "avg_value",
-      "execution_weighted_count": 39,
-      "share_of_total_workload": 0.026
+      "execution_weighted_count": 1056,
+      "share_of_total_workload": 0.0297
     },
     {
       "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000031",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "name": "dim_customer + raw_ticket_sales + tmp_e000387",
+      "execution_weighted_count": 379,
+      "share_of_total_workload": 0.0107
     },
     {
       "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000085",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001267",
+      "execution_weighted_count": 365,
+      "share_of_total_workload": 0.0103
     },
     {
       "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000088",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000089",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000100",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000102",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000110",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000116",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000128",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000132",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000137",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000157",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000170",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000182",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000191",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000207",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "name": "raw_digital_events + tmp_e000624",
+      "execution_weighted_count": 358,
+      "share_of_total_workload": 0.0101
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000210",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "execution_weighted_count": 338,
+      "share_of_total_workload": 0.0095
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000766",
+      "execution_weighted_count": 190,
+      "share_of_total_workload": 0.0053
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001387",
+      "execution_weighted_count": 118,
+      "share_of_total_workload": 0.0033
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000473",
+      "execution_weighted_count": 50,
+      "share_of_total_workload": 0.0014
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000247",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "execution_weighted_count": 41,
+      "share_of_total_workload": 0.0012
     },
     {
       "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000267",
-      "execution_weighted_count": 1,
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000456",
+      "execution_weighted_count": 41,
+      "share_of_total_workload": 0.0012
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000461",
+      "execution_weighted_count": 38,
+      "share_of_total_workload": 0.0011
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001463",
+      "execution_weighted_count": 35,
+      "share_of_total_workload": 0.001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000355",
+      "execution_weighted_count": 34,
+      "share_of_total_workload": 0.001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000506",
+      "execution_weighted_count": 34,
+      "share_of_total_workload": 0.001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000821",
+      "execution_weighted_count": 32,
+      "share_of_total_workload": 0.0009
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000367",
+      "execution_weighted_count": 30,
+      "share_of_total_workload": 0.0008
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000620",
+      "execution_weighted_count": 29,
+      "share_of_total_workload": 0.0008
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000752",
+      "execution_weighted_count": 29,
+      "share_of_total_workload": 0.0008
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e001388",
+      "execution_weighted_count": 24,
       "share_of_total_workload": 0.0007
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000282",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "execution_weighted_count": 22,
+      "share_of_total_workload": 0.0006
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000474",
+      "execution_weighted_count": 22,
+      "share_of_total_workload": 0.0006
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000511",
+      "execution_weighted_count": 22,
+      "share_of_total_workload": 0.0006
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000100",
+      "execution_weighted_count": 20,
+      "share_of_total_workload": 0.0006
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000292",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "execution_weighted_count": 19,
+      "share_of_total_workload": 0.0005
     },
     {
       "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000308",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000746",
+      "execution_weighted_count": 19,
+      "share_of_total_workload": 0.0005
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000900",
+      "execution_weighted_count": 19,
+      "share_of_total_workload": 0.0005
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000932",
+      "execution_weighted_count": 19,
+      "share_of_total_workload": 0.0005
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000088",
+      "execution_weighted_count": 16,
+      "share_of_total_workload": 0.0004
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000157",
+      "execution_weighted_count": 15,
+      "share_of_total_workload": 0.0004
+    },
+    {
+      "type": "Join",
+      "name": "crm_deals + tmp_e001292",
+      "execution_weighted_count": 15,
+      "share_of_total_workload": 0.0004
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000267",
+      "execution_weighted_count": 14,
+      "share_of_total_workload": 0.0004
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000089",
+      "execution_weighted_count": 12,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000618",
+      "execution_weighted_count": 12,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000623",
+      "execution_weighted_count": 12,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000395",
+      "execution_weighted_count": 11,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001130",
+      "execution_weighted_count": 11,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000137",
+      "execution_weighted_count": 10,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e000922",
+      "execution_weighted_count": 10,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000423",
+      "execution_weighted_count": 9,
+      "share_of_total_workload": 0.0003
+    },
+    {
+      "type": "Join",
+      "name": "support_tickets + tmp_e000792",
+      "execution_weighted_count": 9,
+      "share_of_total_workload": 0.0003
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000309",
+      "execution_weighted_count": 8,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000325",
+      "execution_weighted_count": 8,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000638",
+      "execution_weighted_count": 8,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000830",
+      "execution_weighted_count": 8,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001459",
+      "execution_weighted_count": 8,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000635",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000687",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000835",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000989",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "crm_deals + tmp_e001021",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "support_tickets + tmp_e001135",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001238",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e001308",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e001348",
+      "execution_weighted_count": 7,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000170",
+      "execution_weighted_count": 6,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000645",
+      "execution_weighted_count": 6,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000973",
+      "execution_weighted_count": 6,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001004",
+      "execution_weighted_count": 6,
+      "share_of_total_workload": 0.0002
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000085",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000102",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000372",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000455",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000743",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e001132",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "support_tickets + tmp_e001306",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001356",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001446",
+      "execution_weighted_count": 5,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e000725",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_ticket_sales + tmp_e001107",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001137",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001254",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001327",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001421",
+      "execution_weighted_count": 4,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000031",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000116",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000132",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000182",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000384",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000397",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000615",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e000657",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001035",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "crm_deals + tmp_e001060",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e001177",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001277",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001334",
+      "execution_weighted_count": 3,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000128",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000191",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000207",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000308",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000330",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000336",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000519",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000570",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000808",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000831",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000839",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "marketing_touches + raw_ticket_sales + tmp_e000840",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "crm_deals + tmp_e000854",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000914",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e000958",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001001",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001163",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001200",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "support_tickets + tmp_e001240",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e001373",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "crm_deals + tmp_e001402",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "dim_customer + raw_ticket_sales + tmp_e001404",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "raw_digital_events + tmp_e001487",
+      "execution_weighted_count": 2,
+      "share_of_total_workload": 0.0001
+    },
+    {
+      "type": "Join",
+      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000110",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000315",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000319",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000320",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000325",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000330",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000336",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000355",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000367",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000372",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000384",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000387",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000389",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000395",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000397",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000423",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000455",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000456",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000461",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000473",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000474",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000506",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000511",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000519",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000541",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000570",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000615",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000618",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000620",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000623",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000624",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "raw_digital_events + tmp_e000634",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000635",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000638",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000645",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000657",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000687",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e000725",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000743",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000746",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000752",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "raw_merch_orders + raw_ticket_sales + tmp_e000765",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e000766",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "support_tickets + tmp_e000779",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "support_tickets + tmp_e000792",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "support_tickets + tmp_e000802",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000808",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000821",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000830",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000831",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000835",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000839",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e000840",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "crm_deals + tmp_e000854",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000900",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e000914",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e000922",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000932",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e000958",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e000969",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e000973",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e000989",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001001",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001004",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "support_tickets + tmp_e001010",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "crm_deals + tmp_e001021",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001035",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_customer + raw_ticket_sales + tmp_e001055",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "crm_deals + tmp_e001060",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001061",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001098",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e001107",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001112",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001130",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e001132",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "support_tickets + tmp_e001135",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001137",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001163",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001171",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "marketing_touches + raw_ticket_sales + tmp_e001177",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001200",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001238",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "support_tickets + tmp_e001240",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001247",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001254",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001267",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001277",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "dim_event + raw_attendance_scans + raw_ticket_sales + tmp_e001290",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "crm_deals + tmp_e001292",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "support_tickets + tmp_e001306",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e001308",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001327",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001334",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e001348",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "crm_deals + tmp_e001349",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001356",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e001373",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001387",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_ticket_sales + tmp_e001388",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "crm_deals + tmp_e001402",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "dim_customer + raw_ticket_sales + tmp_e001404",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "raw_digital_events + tmp_e001409",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001421",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001446",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     },
     {
       "type": "Join",
       "name": "analytics.vw_ticket_sales_enriched + dim_customer + tmp_e001447",
       "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_merch_orders + raw_ticket_sales + tmp_e001459",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001463",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
-    },
-    {
-      "type": "Join",
-      "name": "raw_digital_events + tmp_e001487",
-      "execution_weighted_count": 1,
-      "share_of_total_workload": 0.0007
+      "share_of_total_workload": 0.0
     }
   ],
   "time_usage_summary": [
     {
-      "time_slot": "Fri-15",
-      "execution_count": 38
-    },
-    {
-      "time_slot": "Tue-14",
-      "execution_count": 33
-    },
-    {
-      "time_slot": "Mon-16",
-      "execution_count": 51
-    },
-    {
-      "time_slot": "Thu-12",
-      "execution_count": 35
-    },
-    {
-      "time_slot": "Mon-11",
-      "execution_count": 36
-    },
-    {
-      "time_slot": "Wed-10",
-      "execution_count": 42
-    },
-    {
-      "time_slot": "Mon-10",
-      "execution_count": 30
-    },
-    {
-      "time_slot": "Tue-9",
-      "execution_count": 40
-    },
-    {
-      "time_slot": "Tue-16",
-      "execution_count": 34
-    },
-    {
-      "time_slot": "Wed-9",
-      "execution_count": 30
-    },
-    {
-      "time_slot": "Tue-10",
-      "execution_count": 33
-    },
-    {
-      "time_slot": "Wed-12",
-      "execution_count": 25
-    },
-    {
-      "time_slot": "Fri-11",
-      "execution_count": 28
-    },
-    {
-      "time_slot": "Thu-13",
-      "execution_count": 41
+      "time_slot": "Wed-11",
+      "execution_count": 816
     },
     {
       "time_slot": "Thu-14",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Thu-17",
-      "execution_count": 41
-    },
-    {
-      "time_slot": "Thu-16",
-      "execution_count": 28
-    },
-    {
-      "time_slot": "Thu-10",
-      "execution_count": 25
-    },
-    {
-      "time_slot": "Mon-17",
-      "execution_count": 41
-    },
-    {
-      "time_slot": "Fri-17",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Wed-15",
-      "execution_count": 41
-    },
-    {
-      "time_slot": "Tue-15",
-      "execution_count": 38
-    },
-    {
-      "time_slot": "Thu-15",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Fri-9",
-      "execution_count": 34
-    },
-    {
-      "time_slot": "Fri-12",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Wed-17",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Fri-13",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Thu-11",
-      "execution_count": 30
-    },
-    {
-      "time_slot": "Mon-14",
-      "execution_count": 25
-    },
-    {
-      "time_slot": "Mon-15",
-      "execution_count": 41
+      "execution_count": 811
     },
     {
       "time_slot": "Fri-16",
-      "execution_count": 29
-    },
-    {
-      "time_slot": "Tue-13",
-      "execution_count": 37
-    },
-    {
-      "time_slot": "Wed-11",
-      "execution_count": 26
-    },
-    {
-      "time_slot": "Wed-16",
-      "execution_count": 27
+      "execution_count": 817
     },
     {
       "time_slot": "Mon-9",
-      "execution_count": 32
-    },
-    {
-      "time_slot": "Wed-14",
-      "execution_count": 21
-    },
-    {
-      "time_slot": "Tue-17",
-      "execution_count": 29
-    },
-    {
-      "time_slot": "Wed-13",
-      "execution_count": 33
-    },
-    {
-      "time_slot": "Mon-12",
-      "execution_count": 29
-    },
-    {
-      "time_slot": "Tue-11",
-      "execution_count": 38
-    },
-    {
-      "time_slot": "Tue-12",
-      "execution_count": 36
-    },
-    {
-      "time_slot": "Fri-14",
-      "execution_count": 31
-    },
-    {
-      "time_slot": "Thu-9",
-      "execution_count": 45
-    },
-    {
-      "time_slot": "Mon-13",
-      "execution_count": 34
+      "execution_count": 928
     },
     {
       "time_slot": "Fri-10",
-      "execution_count": 27
+      "execution_count": 1159
+    },
+    {
+      "time_slot": "Thu-11",
+      "execution_count": 882
+    },
+    {
+      "time_slot": "Tue-16",
+      "execution_count": 316
+    },
+    {
+      "time_slot": "Tue-10",
+      "execution_count": 881
+    },
+    {
+      "time_slot": "Wed-12",
+      "execution_count": 667
+    },
+    {
+      "time_slot": "Fri-17",
+      "execution_count": 989
+    },
+    {
+      "time_slot": "Mon-12",
+      "execution_count": 1042
+    },
+    {
+      "time_slot": "Thu-15",
+      "execution_count": 1180
+    },
+    {
+      "time_slot": "Wed-15",
+      "execution_count": 988
+    },
+    {
+      "time_slot": "Mon-11",
+      "execution_count": 470
+    },
+    {
+      "time_slot": "Fri-13",
+      "execution_count": 248
+    },
+    {
+      "time_slot": "Mon-10",
+      "execution_count": 1075
+    },
+    {
+      "time_slot": "Thu-12",
+      "execution_count": 876
+    },
+    {
+      "time_slot": "Thu-9",
+      "execution_count": 1041
+    },
+    {
+      "time_slot": "Thu-17",
+      "execution_count": 647
+    },
+    {
+      "time_slot": "Tue-17",
+      "execution_count": 164
+    },
+    {
+      "time_slot": "Fri-9",
+      "execution_count": 1114
+    },
+    {
+      "time_slot": "Wed-14",
+      "execution_count": 716
+    },
+    {
+      "time_slot": "Mon-17",
+      "execution_count": 751
+    },
+    {
+      "time_slot": "Wed-17",
+      "execution_count": 225
+    },
+    {
+      "time_slot": "Thu-10",
+      "execution_count": 296
+    },
+    {
+      "time_slot": "Tue-13",
+      "execution_count": 1127
+    },
+    {
+      "time_slot": "Wed-10",
+      "execution_count": 991
+    },
+    {
+      "time_slot": "Tue-11",
+      "execution_count": 940
+    },
+    {
+      "time_slot": "Tue-9",
+      "execution_count": 181
+    },
+    {
+      "time_slot": "Mon-16",
+      "execution_count": 985
+    },
+    {
+      "time_slot": "Mon-13",
+      "execution_count": 1416
+    },
+    {
+      "time_slot": "Fri-15",
+      "execution_count": 616
+    },
+    {
+      "time_slot": "Wed-9",
+      "execution_count": 561
+    },
+    {
+      "time_slot": "Mon-15",
+      "execution_count": 1142
+    },
+    {
+      "time_slot": "Fri-14",
+      "execution_count": 1123
+    },
+    {
+      "time_slot": "Mon-14",
+      "execution_count": 807
+    },
+    {
+      "time_slot": "Thu-16",
+      "execution_count": 380
+    },
+    {
+      "time_slot": "Thu-13",
+      "execution_count": 583
+    },
+    {
+      "time_slot": "Tue-14",
+      "execution_count": 1660
+    },
+    {
+      "time_slot": "Wed-13",
+      "execution_count": 442
+    },
+    {
+      "time_slot": "Fri-12",
+      "execution_count": 861
+    },
+    {
+      "time_slot": "Tue-15",
+      "execution_count": 399
+    },
+    {
+      "time_slot": "Tue-12",
+      "execution_count": 899
+    },
+    {
+      "time_slot": "Wed-16",
+      "execution_count": 607
+    },
+    {
+      "time_slot": "Fri-11",
+      "execution_count": 747
     }
   ],
   "analyst_load_summary": [
     {
+      "analyst": "Dave",
+      "sql_count": 296,
+      "execution_count": 6375,
+      "avg_complexity": 5.6
+    },
+    {
       "analyst": "Eve",
-      "sql_count": 276,
-      "execution_count": 276,
+      "sql_count": 300,
+      "execution_count": 7148,
       "avg_complexity": 5.5
     },
     {
-      "analyst": "Dave",
-      "sql_count": 317,
-      "execution_count": 317,
+      "analyst": "Bob",
+      "sql_count": 281,
+      "execution_count": 6124,
       "avg_complexity": 5.7
     },
     {
       "analyst": "Charlie",
-      "sql_count": 300,
-      "execution_count": 300,
-      "avg_complexity": 5.6
-    },
-    {
-      "analyst": "Bob",
-      "sql_count": 298,
-      "execution_count": 298,
-      "avg_complexity": 5.4
+      "sql_count": 302,
+      "execution_count": 6621,
+      "avg_complexity": 5.5
     },
     {
       "analyst": "Alice",
-      "sql_count": 309,
-      "execution_count": 309,
-      "avg_complexity": 5.5
+      "sql_count": 321,
+      "execution_count": 9298,
+      "avg_complexity": 5.4
     }
   ]
 };

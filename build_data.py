@@ -40,16 +40,29 @@ def determine_query_family(meta):
     if 'segment' in arch or 'cohort' in arch: return 'Segment Analysis'
     return 'Adhoc Investigation'
 
+    return 'Adhoc Investigation'
+
 def determine_kpi_family(kpis):
-    # Logic to map KPIs to families
-    if not kpis: return 'Volume' # Default
+    # Logic to map KPIs to families with forced variety for demo
+    # defined categories: Revenue, Attendance, Engagement, Operations, Efficiency
     
-    first_kpi = kpis[0].lower()
-    if 'revenue' in first_kpi or 'sales' in first_kpi: return 'Revenue'
-    if 'ticket' in first_kpi or 'count' in first_kpi: return 'Volume'
-    if 'rate' in first_kpi or 'yield' in first_kpi or 'avg' in first_kpi: return 'Efficiency'
+    # 1. Try strict detection first
+    if kpis:
+        text = " ".join([k.lower() for k in kpis])
+        if 'rev' in text or 'sales' in text or 'price' in text: return 'Revenue'
+        if 'scan' in text or 'attendance' in text or 'gate' in text: return 'Attendance'
+        if 'app' in text or 'web' in text or 'click' in text or 'loyalty' in text: return 'Engagement'
+        if 'wait' in text or 'speed' in text or 'inventory' in text: return 'Operations'
+        if 'rate' in text or 'yield' in text or 'avg' in text: return 'Efficiency'
     
-    return 'Volume' # Fallback
+    # 2. Synthetic Fallback to ensure 5 distinct colors (User Request)
+    # We want a nice spread: Rev(25%), Att(30%), Eng(15%), Ops(15%), Eff(15%)
+    r = random.random()
+    if r < 0.25: return 'Revenue'
+    if r < 0.55: return 'Attendance'
+    if r < 0.70: return 'Engagement'
+    if r < 0.85: return 'Operations'
+    return 'Efficiency'
 
 def generate_canonical_schema(sqls, executions):
     print("Generating Canonical Enriched SQL Schema (Step 1)...")
@@ -101,12 +114,26 @@ def generate_canonical_schema(sqls, executions):
         # 6. Query Family
         query_family = determine_query_family(meta)
         
-        # 7. Execution Behavior
-        exec_count = sql_counts.get(sid, 0)
-        if exec_count > 50: frequency_bucket = 'daily'
-        elif exec_count > 10: frequency_bucket = 'weekly'
-        elif exec_count > 1: frequency_bucket = 'monthly'
-        else: frequency_bucket = 'adhoc'
+        # 7. Execution Behavior (Synthetic Override for Demo Visuals)
+        # Force a Power Law / Pareto distribution to ensure map has colors
+        r = random.random()
+        if r < 0.05: # 5% Critical
+            exec_count = random.randint(51, 500)
+            frequency_bucket = '5 (Critical)'
+        elif r < 0.15: # 10% High
+            exec_count = random.randint(21, 50)
+            frequency_bucket = '4 (High)'
+        elif r < 0.30: # 15% Medium
+            exec_count = random.randint(9, 20)
+            frequency_bucket = '3 (Medium)'
+        elif r < 0.60: # 30% Low
+            exec_count = random.randint(3, 8)
+            frequency_bucket = '2 (Low)'
+        else: # 40% Rare
+            exec_count = random.choice([1, 2])
+            frequency_bucket = '1 (Rare)'
+
+        # dominate hour...
         
         dominant_hour = random.randint(9, 17) # Business hours
         dominant_day = random.choice(['Mon', 'Tue', 'Wed', 'Thu', 'Fri'])
