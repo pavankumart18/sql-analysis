@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL Analysis | NFL Usage Patterns</title>
+    <title>SQL Analysis</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTYgNyAyIDcgNyAyLTcgMi0yIDctMi03LTctMiA3LTJaIi8+PC9zdmc+">
 
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-lg fixed-top glass-navbar" data-bs-theme="light">
         <div class="container-fluid px-4">
             <a class="navbar-brand d-flex align-items-center gap-2" href=".">
-                <span><span class="text-primary fw-bold">SQL</span>Usage // NFL</span>
+                <span><span class="text-primary fw-bold">SQL</span>Usage</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -97,95 +97,7 @@
 
                                     <hr class="border-secondary opacity-25 my-4">
 
-                                    <!-- THE THREE LENSES -->
-                                    <!-- THE THREE LENSES -->
-                                    <div class="row g-5">
-                                        <!-- LENS 1: FREQUENCY -->
-                                        <div class="col-lg-4">
-                                            <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
-                                                style="font-family: 'Playfair Display', serif;">
-                                                <i class="bi bi-activity text-danger me-2 fs-4"></i> The Pulse
-                                            </h5>
-                                            <p class="text-secondary small mb-3">
-                                                <strong>Behavior:</strong> Extreme Repetition
-                                            </p>
-                                            <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
-                                                The audit reveals a stark "Pareto Efficiency" imbalance. A tiny elite of
-                                                <strong>75 "Critical" scripts</strong> (just 5% of your codebase)
-                                                are doing the heavy lifting, responsible for <strong>68% of total daily
-                                                    execution time</strong>. These are your "load-bearing" reports.
-                                                <br><br>
-                                                Conversely, the vast blue ocean of <strong>600 "Rare" queries</strong>
-                                                contributes almost zero load (0.4%), yet represents
-                                                <strong>40% of unique intellectual curiosity</strong>. This
-                                                differentiation is vital: You must <em>optimize</em> the Red dots
-                                                for performance, but you must <em>nurture</em> the Indigo dots for
-                                                innovation.
-                                                <br><br>
-                                                <em><strong>Strategic Finding:</strong> The organization is
-                                                    operationally mature (high automation) but heavily dependent on a
-                                                    fragile core.
-                                                    If those 75 Red scripts fail, the business flies blind.</em>
-                                            </p>
-                                        </div>
 
-                                        <!-- LENS 2: KPI FAMILIES -->
-                                        <div class="col-lg-4">
-                                            <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
-                                                style="font-family: 'Playfair Display', serif;">
-                                                <i class="bi bi-diagram-2 text-success me-2 fs-4"></i> The Landscape
-                                            </h5>
-                                            <p class="text-secondary small mb-3">
-                                                <strong>Behavior:</strong> Domain Dominance
-                                            </p>
-                                            <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
-                                                Data follows the money—usually. But here, <strong>Attendance is
-                                                    King</strong>. Our semantic analysis identified
-                                                <strong style="color:#6366f1">450 queries (30%)</strong> focused purely
-                                                on headcount, gate scans, and physical volume.
-                                                This significantly overpowers <strong style="color:#ec4899">Revenue
-                                                    (25%)</strong> and trails <strong style="color:#06b6d4">Engagement
-                                                    (15%)</strong>.
-                                                <br><br>
-                                                This signals a "Volume-First" culture. The team is spending twice as
-                                                much effort counting <em>who</em> showed up than analyzing
-                                                <em>how</em> they experienced the event (Engagement) or <em>what</em>
-                                                they spent (Revenue/Yield).
-                                                <br><br>
-                                                <em><strong>Strategic Finding:</strong> We are observing an operational
-                                                    measurement bias. Shifting analyst focus from "Volume" to "Value"
-                                                    (Yield/Engagement)
-                                                    represents the largest immediate ROI opportunity.</em>
-                                            </p>
-                                        </div>
-
-                                        <!-- LENS 3: QUERY INTENT -->
-                                        <div class="col-lg-4">
-                                            <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
-                                                style="font-family: 'Playfair Display', serif;">
-                                                <i class="bi bi-lightbulb text-warning me-2 fs-4"></i> The Mindset
-                                            </h5>
-                                            <p class="text-secondary small mb-3">
-                                                <strong>Behavior:</strong> Reactive Forensics
-                                            </p>
-                                            <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
-                                                Are we building a library, or fighting a fire? We classified <strong>890
-                                                    queries</strong> as "Ad-hoc Investigations"—one-off
-                                                questions that never repeat. Compare this to just <strong>210
-                                                    standardized "Executive Reports"</strong>.
-                                                <br><br>
-                                                This <strong>4:1 ratio</strong> is the signature of a high-agility, but
-                                                low-maturity data culture. The team is incredibly fast
-                                                at answering new questions (Reactive), but struggling to codify those
-                                                answers into permanent, trusted dashboards (Proactive).
-                                                They are "Data Hunters" rather than "Data Farmers."
-                                                <br><br>
-                                                <em><strong>Strategic Finding:</strong> The team is spending 70% of
-                                                    their time answering "What happened yesterday?" instead of
-                                                    building tools to explain "What will happen tomorrow?"</em>
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <!-- FOOTER -->
@@ -255,6 +167,100 @@
                         <span class="d-block text-secondary small text-uppercase"
                             style="letter-spacing: 0.1em; font-size: 0.7rem;">Scroll to Solution</span>
                         <i class="bi bi-arrow-down text-secondary animate-bounce" style="font-size: 1.5rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSIGHTS SECTION (Moved from Section A) -->
+        <section class="py-5 bg-body-tertiary border-bottom">
+            <div class="container">
+                <!-- THE THREE LENSES -->
+                <div class="row g-5">
+                    <!-- LENS 1: FREQUENCY -->
+                    <div class="col-lg-4">
+                        <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
+                            style="font-family: 'Playfair Display', serif;">
+                            <i class="bi bi-activity text-danger me-2 fs-4"></i> The Pulse
+                        </h5>
+                        <p class="text-secondary small mb-3">
+                            <strong>Behavior:</strong> Extreme Repetition
+                        </p>
+                        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
+                            The audit reveals a stark "Pareto Efficiency" imbalance. A tiny elite of
+                            <strong>75 "Critical" scripts</strong> (just 5% of your codebase)
+                            are doing the heavy lifting, responsible for <strong>68% of total daily
+                                execution time</strong>. These are your "load-bearing" reports.
+                            <br><br>
+                            Conversely, the vast blue ocean of <strong>600 "Rare" queries</strong>
+                            contributes almost zero load (0.4%), yet represents
+                            <strong>40% of unique intellectual curiosity</strong>. This
+                            differentiation is vital: You must <em>optimize</em> the Red dots
+                            for performance, but you must <em>nurture</em> the Indigo dots for
+                            innovation.
+                            <br><br>
+                            <em><strong>Strategic Finding:</strong> The organization is
+                                operationally mature (high automation) but heavily dependent on a
+                                fragile core.
+                                If those 75 Red scripts fail, the business flies blind.</em>
+                        </p>
+                    </div>
+
+                    <!-- LENS 2: KPI FAMILIES -->
+                    <div class="col-lg-4">
+                        <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
+                            style="font-family: 'Playfair Display', serif;">
+                            <i class="bi bi-diagram-2 text-success me-2 fs-4"></i> The Landscape
+                        </h5>
+                        <p class="text-secondary small mb-3">
+                            <strong>Behavior:</strong> Domain Dominance
+                        </p>
+                        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
+                            Data follows the money—usually. But here, <strong>Attendance is
+                                King</strong>. Our semantic analysis identified
+                            <strong style="color:#6366f1">450 queries (30%)</strong> focused purely
+                            on headcount, gate scans, and physical volume.
+                            This significantly overpowers <strong style="color:#ec4899">Revenue
+                                (25%)</strong> and trails <strong style="color:#06b6d4">Engagement
+                                (15%)</strong>.
+                            <br><br>
+                            This signals a "Volume-First" culture. The team is spending twice as
+                            much effort counting <em>who</em> showed up than analyzing
+                            <em>how</em> they experienced the event (Engagement) or <em>what</em>
+                            they spent (Revenue/Yield).
+                            <br><br>
+                            <em><strong>Strategic Finding:</strong> We are observing an operational
+                                measurement bias. Shifting analyst focus from "Volume" to "Value"
+                                (Yield/Engagement)
+                                represents the largest immediate ROI opportunity.</em>
+                        </p>
+                    </div>
+
+                    <!-- LENS 3: QUERY INTENT -->
+                    <div class="col-lg-4">
+                        <h5 class="text-body fw-bold mb-3 d-flex align-items-center"
+                            style="font-family: 'Playfair Display', serif;">
+                            <i class="bi bi-lightbulb text-warning me-2 fs-4"></i> The Mindset
+                        </h5>
+                        <p class="text-secondary small mb-3">
+                            <strong>Behavior:</strong> Reactive Forensics
+                        </p>
+                        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.7;">
+                            Are we building a library, or fighting a fire? We classified <strong>890
+                                queries</strong> as "Ad-hoc Investigations"—one-off
+                            questions that never repeat. Compare this to just <strong>210
+                                standardized "Executive Reports"</strong>.
+                            <br><br>
+                            This <strong>4:1 ratio</strong> is the signature of a high-agility, but
+                            low-maturity data culture. The team is incredibly fast
+                            at answering new questions (Reactive), but struggling to codify those
+                            answers into permanent, trusted dashboards (Proactive).
+                            They are "Data Hunters" rather than "Data Farmers."
+                            <br><br>
+                            <em><strong>Strategic Finding:</strong> The team is spending 70% of
+                                their time answering "What happened yesterday?" instead of
+                                building tools to explain "What will happen tomorrow?"</em>
+                        </p>
                     </div>
                 </div>
             </div>
