@@ -328,7 +328,7 @@ html_content = f"""<!DOCTYPE html>
             <button class="btn" onclick="clearSelection()">Clear Selection</button>
             <button class="btn" onclick="isolateSelection()">Isolate</button>
             <button class="btn" onclick="resetFilters()">Reset Filters</button>
-            <button class="btn" id="darkModeBtn" onclick="toggleDarkMode()">Dark</button>
+
         </div>
     </div>
     
@@ -628,11 +628,7 @@ html_content = f"""<!DOCTYPE html>
                 filtered + ' shown, ' + selected + ' selected';
         }}
         
-        function toggleDarkMode() {{
-            document.body.classList.toggle('dark-mode');
-            const btn = document.getElementById('darkModeBtn');
-            btn.textContent = document.body.classList.contains('dark-mode') ? 'Light' : 'Dark';
-        }}
+
     </script>
 </body>
 </html>
