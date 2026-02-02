@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Constants - Premium Color Palette
     const COLORS = {
         freq: {
-            '1 (Rare)': '#94a3b8',      // Slate (1-2)
+            '1 (Rare)': '#818cf8',      // Indigo (was Gray)
             '2 (Low)': '#2dd4bf',       // Teal (3-8)
             '3 (Medium)': '#facc15',    // Yellow (9-20)
             '4 (High)': '#fb923c',      // Orange (21-50)
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return COLORS.freq['1 (Rare)'];
         } else if (state.colorMode === 'kpi_family') {
             const family = item.primary_kpi_family || 'Volume';
-            return COLORS.kpiFamily[family] || '#94a3b8';
+            return COLORS.kpiFamily[family] || '#818cf8'; // Fallback to Indigo
         } else if (state.colorMode === 'query_family') {
             const family = item.query_family || 'Adhoc';
             const hash = family.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.className = 'd-flex align-items-center mb-2';
                 item.innerHTML = `
                 <div class="rounded-pill me-2" style="width:12px; height:12px; background:${COLORS.freq[bucket.label]}"></div>
-                <span class="text-secondary small">${bucket.label} <span class="ms-1 text-white opacity-50">(${countNum})</span></span>
+                <span class="text-secondary small">${bucket.label} <span class="ms-1 text-secondary opacity-50">(${countNum})</span></span>
             `;
                 legendContainer.appendChild(item);
             });
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.className = 'd-flex align-items-center mb-2';
                 item.innerHTML = `
                     <div class="rounded-pill me-2" style="width:12px; height:12px; background:${fam.color}"></div>
-                    <span class="text-secondary small">${fam.name} <span class="ms-1 text-white opacity-50">${countStr}</span></span>
+                    <span class="text-secondary small">${fam.name} <span class="ms-1 text-secondary opacity-50">${countStr}</span></span>
                 `;
                 legendContainer.appendChild(item);
             });
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.className = 'd-flex align-items-center mb-1';
                 item.innerHTML = `
                     <div class="rounded-pill me-2" style="width:12px; height:12px; background:${color}"></div>
-                    <span class="text-secondary small text-white-50">${fam} <span class="ms-1 text-white opacity-50">(${counts[fam]})</span></span>
+                    <span class="text-secondary small">${fam} <span class="ms-1 text-secondary opacity-50">(${counts[fam]})</span></span>
                  `;
                 legendContainer.appendChild(item);
             });
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.className = 'd-flex align-items-center mb-1';
                 item.innerHTML = `
                     <div class="rounded-pill me-2" style="width:12px; height:12px; background:${color}"></div>
-                    <span class="text-secondary small text-white-50">${tbl} <span class="ms-1 text-white opacity-50">(${counts[tbl]})</span></span>
+                    <span class="text-secondary small">${tbl} <span class="ms-1 text-secondary opacity-50">(${counts[tbl]})</span></span>
                  `;
                 legendContainer.appendChild(item);
             });
@@ -863,7 +863,7 @@ GROUP BY 1, 2, 3;
             .append("svg")
             .attr("width", width)
             .attr("height", height)
-            .style("background", "rgba(15,23,42,0.3)")
+            .attr("class", "d3-chart-bg")
             .style("border-radius", "8px");
 
         let data = [];
@@ -1047,26 +1047,26 @@ GROUP BY 1, 2, 3;
              <div class="row justify-content-center">
                  <div class="col-lg-10">
                     <div class="d-flex align-items-center mb-4 border-bottom border-secondary pb-3">
-                         <h3 class="fw-bold text-white mb-0 me-3" style="font-family: 'Playfair Display', serif;">${data.fullName}</h3>
+                         <h3 class="fw-bold text-body mb-0 me-3" style="font-family: 'Playfair Display', serif;">${data.fullName}</h3>
                          <div class="ms-auto">${tagsHtml}</div>
                     </div>
                     
                     <div class="detail-block why mb-5">
                        <label class="text-warning text-uppercase small fw-bold mb-2"><i class="bi bi-lightbulb me-2"></i>The Insight</label>
-                       <p class="lead text-light" style="font-size: 1.1rem; line-height: 1.6;">${data.details.why}</p>
+                       <p class="lead text-body" style="font-size: 1.1rem; line-height: 1.6;">${data.details.why}</p>
                    </div>
                    
                    <div class="row mb-5">
                         <div class="col-md-6">
-                            <div class="detail-block input p-3 border border-secondary rounded bg-dark">
+                            <div class="detail-block input p-3 border border-secondary rounded code-block-bg">
                                 <label class="text-uppercase small fw-bold text-secondary mb-2">Input</label>
-                                <p class="mb-0 text-white-50">${data.details.in}</p>
+                                <p class="mb-0 text-secondary">${data.details.in}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="detail-block output p-3 border border-primary rounded" style="background: rgba(14, 165, 233, 0.1);">
                                 <label class="text-uppercase small fw-bold text-primary mb-2">Output</label>
-                                <p class="mb-0 text-white">${data.details.out}</p>
+                                <p class="mb-0 text-body">${data.details.out}</p>
                             </div>
                         </div>
                    </div>
@@ -1076,8 +1076,8 @@ GROUP BY 1, 2, 3;
                         <label class="d-block text-secondary small fw-bold text-uppercase mb-2">
                             <i class="bi bi-code-square me-2"></i>Sample Evidence
                         </label>
-                        <div class="bg-darker border border-secondary rounded p-3 text-monospace shadow-sm" 
-                             style="font-family: 'Consolas', monospace; font-size: 0.8rem; color: #a5b4fc; height: auto; max-height: 400px; overflow-y: auto; white-space: pre-wrap; background: #0f172a;">
+                        <div class="code-block-bg border border-secondary rounded p-3 text-monospace shadow-sm" 
+                             style="font-family: 'Consolas', monospace; font-size: 0.8rem; color: var(--accent-color); height: auto; max-height: 400px; overflow-y: auto; white-space: pre-wrap;">
                             ${data.details.rawData || 'No sample data available.'}
                         </div>
                     </div>
@@ -1085,7 +1085,7 @@ GROUP BY 1, 2, 3;
                     <div class="text-center mt-5 pt-3 border-top border-secondary">
                         <span class="detail-artifact btn btn-outline-primary px-4 py-2 rounded-pill">
                             <i class="bi bi-file-earmark-code me-2"></i>
-                            View Full Artifact: <span class="fw-bold ms-1 text-white">${data.details.artifact}</span>
+                            View Full Artifact: <span class="fw-bold ms-1 text-body">${data.details.artifact}</span>
                         </span>
                     </div>
                  </div>
@@ -1260,26 +1260,26 @@ GROUP BY 1, 2, 3;
             narrative = document.createElement('div');
             narrative.id = 'c-narrative';
             narrative.innerHTML = `
-                <div style="text-align:center; max-width:800px; margin:0 auto 2rem auto; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1.5rem;">
-                    <h2 style="color:#f8fafc; margin-bottom:0.75rem; font-size:1.8rem;">The Middle Layer: <span style="color:#4ade80">Derived, Not Guessed</span></h2>
+                <div class="middle-layer-intro text-center mx-auto mb-5 pb-4 border-bottom border-light" style="max-width:800px;">
+                    <h2 class="section-title mb-3 fs-2 text-headings">The Middle Layer: <span class="text-success fw-bold">Derived, Not Guessed</span></h2>
                     
-                    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:20px; text-align:left; margin-top:1.5rem;">
-                        <div style="padding:15px; background:rgba(30,41,59,0.5); border-radius:8px;">
-                            <div style="color:#94a3b8; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">Problem</div>
-                            <div style="color:#e2e8f0; margin-top:5px; font-size:0.9rem;">1,500 Ad-Hoc Scripts</div>
+                    <div class="intro-grid d-grid gap-4 text-start mt-4 mx-auto" style="grid-template-columns: 1fr auto 1fr; align-items:center;">
+                        <div class="problem-card p-4 rounded-3">
+                            <div class="text-uppercase small fw-bold tracking-wide text-secondary mb-2">Problem</div>
+                            <div class="fs-5 fw-bold text-headings">1,500 Ad-Hoc Scripts</div>
                         </div>
-                        <div style="display:flex; align-items:center; justify-content:center; color:#38bdf8;">
-                            <i class="bi bi-arrow-right" style="font-size:1.5rem;"></i>
+                        <div class="d-flex align-items-center justify-content-center text-primary">
+                            <i class="bi bi-arrow-right fs-2"></i>
                         </div>
-                        <div style="padding:15px; background:rgba(56,189,248,0.1); border-radius:8px; border:1px solid rgba(56,189,248,0.2);">
-                            <div style="color:#38bdf8; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">Solution</div>
-                            <div style="color:#fff; margin-top:5px; font-size:0.9rem; font-weight:600;">3 Clean Tables</div>
+                        <div class="solution-card p-4 rounded-3 border border-primary bg-primary bg-opacity-10">
+                            <div class="text-uppercase small fw-bold tracking-wide text-primary mb-2">Solution</div>
+                            <div class="fs-5 fw-bold text-headings">3 Clean Tables</div>
                         </div>
                     </div>
 
-                    <p style="color:#cbd5e1; font-size:1.05rem; line-height:1.6; margin-top:1.5rem;">
+                    <p class="story-text fs-5 mt-4 text-secondary mx-auto" style="max-width:700px; line-height:1.6;">
                         We didn't sit in a room and design this schema on a whiteboard. 
-                        We let the <strong>usage data</strong> tell us what to build. 
+                        We let the <strong class="text-headings">usage data</strong> tell us what to build. 
                         These 3 tables alone solve 80% of the daily analytical workload.
                     </p>
                 </div>
@@ -1294,24 +1294,22 @@ GROUP BY 1, 2, 3;
 
         // --- Left: Accordion Navigation ---
         const sidebar = document.createElement('div');
-        sidebar.className = 'explorer-sidebar';
+        sidebar.className = 'explorer-sidebar bg-panel border border-light';
         sidebar.innerHTML = `
-            <div class="explorer-header">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                </svg>
-                Derived Tables
-                <span style="margin-left:auto; color:#64748b; font-size:0.75rem;">${MIDDLE_LAYER_DATA.length} tables</span>
+            <div class="explorer-header border-bottom border-light p-3 d-flex align-items-center gap-2">
+                <i class="bi bi-list-nested text-primary"></i>
+                <span class="fw-bold text-headings">Derived Tables</span>
+                <span class="ms-auto small text-secondary">${MIDDLE_LAYER_DATA.length} tables</span>
             </div>
-            <div id="accordion-container" style="overflow-y:auto; flex:1;"></div>
+            <div id="accordion-container" class="flex-grow-1 overflow-auto custom-scrollbar"></div>
         `;
         layoutContainer.appendChild(sidebar);
 
         // --- Right: Schema Details Panel ---
         const detailsPanel = document.createElement('div');
-        detailsPanel.className = 'schema-panel';
+        detailsPanel.className = 'schema-panel bg-panel border-light';
         detailsPanel.id = 'explorer-details';
-        detailsPanel.innerHTML = `<div class="placeholder-text">Select a table to view its schema</div>`;
+        detailsPanel.innerHTML = `<div class="placeholder-text text-secondary p-5 text-center">Select a table to view its schema</div>`;
         layoutContainer.appendChild(detailsPanel);
 
         // --- Render Accordion Items ---
@@ -1319,40 +1317,37 @@ GROUP BY 1, 2, 3;
 
         MIDDLE_LAYER_DATA.forEach((table, index) => {
             const item = document.createElement('div');
-            item.className = 'accordion-table-item';
+            item.className = 'accordion-table-item border-bottom border-light';
             if (index === 0) item.classList.add('active', 'expanded');
 
             // Type badge color
-            const badgeColor = table.type === 'fact' ? '#38bdf8' : '#a78bfa';
-            const badgeBg = table.type === 'fact' ? 'rgba(56, 189, 248, 0.15)' : 'rgba(167, 139, 250, 0.15)';
+            const isFact = table.type === 'fact';
+            const badgeClass = isFact ? 'bg-info bg-opacity-10 text-info' : 'bg-purple bg-opacity-10 text-purple';
 
             // Create bullet points HTML
             const bulletsHTML = table.bullets.map(b => `
-                <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:4px;">
-                    <span style="color:#4ade80; font-size:0.7rem; margin-top:2px;">●</span>
-                    <span style="color:#94a3b8; font-size:0.8rem; line-height:1.4;">${b}</span>
+                <div class="d-flex align-items-start gap-2 mb-1">
+                    <span class="text-success small mt-1">●</span>
+                    <span class="text-secondary small">${b}</span>
                 </div>
             `).join('');
 
             item.innerHTML = `
-                <div class="accordion-header" style="cursor:pointer;">
-                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                        <svg class="accordion-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transition:transform 0.2s; flex-shrink:0;">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                        <span style="color:#f1f5f9; font-weight:600; font-size:0.95rem;">${table.name}</span>
-                        <span style="background:${badgeBg}; color:${badgeColor}; font-size:0.65rem; padding:2px 6px; border-radius:10px; font-weight:600; text-transform:uppercase;">${table.type}</span>
+                <div class="accordion-header p-3 cursor-pointer">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-chevron-right accordion-chevron text-secondary transition-transform" style="font-size:0.8rem;"></i>
+                        <span class="fw-semibold text-headings small">${table.name}</span>
+                        <span class="badge ${badgeClass} rounded-pill small" style="font-size:0.65rem;">${table.type.toUpperCase()}</span>
                     </div>
                 </div>
-                <div class="accordion-content" style="overflow:hidden; max-height:0; transition:max-height 0.3s ease;">
-                    <div style="color:#cbd5e1; font-size:0.85rem; line-height:1.5; margin-bottom:8px;">
-                        ${table.purpose}
-                    </div>
-                    <div style="background:rgba(74, 222, 128, 0.1); border-left:2px solid #4ade80; padding:6px 10px; margin-bottom:10px; border-radius:0 4px 4px 0;">
-                        <span style="color:#4ade80; font-weight:600; font-size:0.8rem;">${table.impact}</span>
-                    </div>
-                    <div class="accordion-bullets">
-                        ${bulletsHTML}
+                <div class="accordion-content overflow-hidden transition-all" style="max-height:0;">
+                    <div class="p-3 pt-0 ps-4">
+                        <div class="text-secondary small mb-2 border-start border-success ps-2 bg-success bg-opacity-10 rounded-end py-1">
+                            ${table.impact}
+                        </div>
+                        <div class="accordion-bullets ps-1">
+                            ${bulletsHTML}
+                        </div>
                     </div>
                 </div>
             `;
@@ -1360,15 +1355,12 @@ GROUP BY 1, 2, 3;
             // Expand first item by default
             if (index === 0) {
                 const content = item.querySelector('.accordion-content');
-                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.maxHeight = '500px';
                 item.querySelector('.accordion-chevron').style.transform = 'rotate(90deg)';
+                setTimeout(() => renderExplorerDetails(table), 50);
             }
 
             item.addEventListener('click', () => {
-                const isExpanded = item.classList.contains('expanded');
-                const content = item.querySelector('.accordion-content');
-                const chevron = item.querySelector('.accordion-chevron');
-
                 // Collapse all others
                 document.querySelectorAll('.accordion-table-item').forEach(i => {
                     i.classList.remove('active', 'expanded');
@@ -1380,7 +1372,9 @@ GROUP BY 1, 2, 3;
 
                 // Toggle current
                 item.classList.add('active', 'expanded');
-                content.style.maxHeight = content.scrollHeight + 'px';
+                const content = item.querySelector('.accordion-content');
+                const chevron = item.querySelector('.accordion-chevron');
+                content.style.maxHeight = '500px';
                 chevron.style.transform = 'rotate(90deg)';
 
                 renderExplorerDetails(table);
@@ -1388,9 +1382,6 @@ GROUP BY 1, 2, 3;
 
             accordionContainer.appendChild(item);
         });
-
-        // Initial Render
-        if (MIDDLE_LAYER_DATA.length > 0) renderExplorerDetails(MIDDLE_LAYER_DATA[0]);
     }
 
     function renderExplorerDetails(table) {
@@ -1401,73 +1392,77 @@ GROUP BY 1, 2, 3;
         const pkName = pkCol ? pkCol.name : table.schema[0]?.name || 'id';
 
         // Type badge styling
-        const badgeColor = table.type === 'fact' ? '#38bdf8' : '#a78bfa';
-        const badgeBg = table.type === 'fact' ? 'rgba(56, 189, 248, 0.2)' : 'rgba(167, 139, 250, 0.2)';
+        const isFact = table.type === 'fact';
+        const badgeClass = isFact ? 'bg-info bg-opacity-10 text-info' : 'bg-purple bg-opacity-10 text-purple';
 
-        // Build schema rows with all 5 columns: Name, Type, What, Why, How
+        // Build schema rows
         const rows = table.schema.map(col => `
-            <tr>
-                <td>
-                    <div class="col-name">${col.name}${col.name === pkName ? ' <span class="flag-pk">PK</span>' : ''}</div>
+            <tr class="schema-row border-bottom border-light">
+                <td class="p-3">
+                    <div class="fw-bold text-headings font-monospace small">${col.name}${col.name === pkName ? ' <span class="badge bg-warning text-dark ms-1">PK</span>' : ''}</div>
                 </td>
-                <td class="col-type">${col.type}</td>
-                <td style="color:#e2e8f0;">${col.what}</td>
-                <td style="color:#94a3b8;">${col.why}</td>
-                <td style="color:#64748b; font-style:italic;">${col.how}</td>
+                <td class="p-3 text-secondary small font-monospace">${col.type}</td>
+                <td class="p-3 text-secondary small">${col.what}</td>
+                <td class="p-3 text-secondary small">${col.why}</td>
+                <td class="p-3 text-secondary small fst-italic">${col.how}</td>
             </tr>
         `).join('');
 
         container.innerHTML = `
-            <div class="table-detail-header">
-                <div class="table-title-row">
-                    <h2>${table.name}</h2>
-                    <span class="type-badge" style="background:${badgeBg}; color:${badgeColor};">${table.type.toUpperCase()}</span>
+            <div class="table-detail-header p-4 border-bottom border-light">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h2 class="h3 fw-bold text-headings mb-0 font-monospace">${table.name}</h2>
+                    <span class="badge ${badgeClass} px-3 py-2 rounded-pill">${table.type.toUpperCase()}</span>
                 </div>
                 
-                <p style="color:#e2e8f0; line-height:1.6; max-width:800px; margin:0.5rem 0 1rem 0; font-size:0.95rem;">
+                <p class="text-secondary lead fs-6 mb-4">
                     ${table.purpose}
                 </p>
 
-                <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem;">
-                    <div style="background:rgba(74, 222, 128, 0.1); border:1px solid rgba(74, 222, 128, 0.3); padding:8px 14px; border-radius:6px;">
-                        <span style="color:#4ade80; font-weight:600; font-size:0.85rem;">📊 ${table.impact}</span>
+                <div class="d-flex gap-3 mb-4">
+                    <div class="d-flex align-items-center gap-2 px-3 py-2 rounded bg-success bg-opacity-10 border border-success border-opacity-25">
+                         <i class="bi bi-bar-chart-fill text-success"></i>
+                         <span class="text-success fw-bold small">${table.impact}</span>
                     </div>
-                    <div style="background:rgba(251, 146, 60, 0.1); border:1px solid rgba(251, 146, 60, 0.3); padding:8px 14px; border-radius:6px;">
-                        <span style="color:#fb923c; font-weight:600; font-size:0.85rem;">🔧 ${table.pain}</span>
+                     <div class="d-flex align-items-center gap-2 px-3 py-2 rounded bg-warning bg-opacity-10 border border-warning border-opacity-25">
+                         <i class="bi bi-tools text-warning"></i>
+                         <span class="text-warning fw-bold small">${table.pain}</span>
                     </div>
                 </div>
 
-                <div class="pk-box">
-                    <span class="pk-label">Primary Key:</span>
-                    <span class="pk-val">${pkName}</span>
-                    <span class="confidence-badge" style="background:rgba(74,222,128,0.2); color:#4ade80;">derived from usage</span>
+                <div class="d-flex align-items-center gap-2 text-secondary small font-monospace">
+                    <span class="fw-bold text-headings">Primary Key:</span>
+                    <span class="text-primary">${pkName}</span>
+                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25">derived from usage</span>
                 </div>
             </div>
 
-            <div class="schema-grid-container">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-                    <h4 style="margin:0; color:#94a3b8; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.05em;">
+            <div class="schema-grid-container p-0">
+                <div class="d-flex justify-content-between align-items-center p-3 bg-body-tertiary border-bottom border-light">
+                    <h4 class="mb-0 text-uppercase small fw-bold text-secondary tracking-wide">
                         Column Definitions
                     </h4>
-                    <span style="color:#64748b; font-size:0.75rem;">${table.schema.length} columns</span>
+                    <span class="text-secondary small">${table.schema.length} columns</span>
                 </div>
-                <table class="modern-table">
-                    <thead>
-                        <tr>
-                            <th style="width:18%;">Column</th>
-                            <th style="width:10%;">Type</th>
-                            <th style="width:24%;">What it is</th>
-                            <th style="width:28%;">Why it exists</th>
-                            <th style="width:20%;">How calculated</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${rows}
-                    </tbody>
-                </table>
-                <div style="margin-top:1.5rem; padding:1rem; background:rgba(56,189,248,0.05); border-radius:8px; border-left:3px solid #38bdf8;">
-                    <p style="margin:0; color:#94a3b8; font-size:0.85rem; line-height:1.6;">
-                        <strong style="color:#38bdf8;">Key insight:</strong> Every column above can be traced back to observed query patterns. 
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="bg-body-secondary">
+                            <tr>
+                                <th class="p-3 text-secondary small fw-bold text-uppercase border-bottom border-light" style="width:20%;">Column</th>
+                                <th class="p-3 text-secondary small fw-bold text-uppercase border-bottom border-light" style="width:10%;">Type</th>
+                                <th class="p-3 text-secondary small fw-bold text-uppercase border-bottom border-light" style="width:25%;">What it is</th>
+                                <th class="p-3 text-secondary small fw-bold text-uppercase border-bottom border-light" style="width:25%;">Why it exists</th>
+                                <th class="p-3 text-secondary small fw-bold text-uppercase border-bottom border-light" style="width:20%;">How calculated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rows}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-3 m-3 bg-info bg-opacity-10 border-start border-4 border-info rounded-end">
+                    <p class="mb-0 text-secondary small">
+                        <strong class="text-info">Key insight:</strong> Every column above can be traced back to observed query patterns. 
                         If a column can't answer <em>what</em>, <em>why</em>, and <em>how</em> — it shouldn't exist.
                     </p>
                 </div>
