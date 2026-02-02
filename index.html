@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Analysis | NFL Usage Patterns</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTYgNyAyIDcgNyAyLTcgMi0yIDctMi03LTctMiA3LTJaIi8+PC9zdmc+">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- D3 for visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="aggregates.js"></script>
+</head>
+
+<body data-bs-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2" href=".">
+                <i class="bi bi-database text-primary"></i>
+                <span><span class="text-primary fw-bold">SQL</span>Usage // NFL</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Section Navigation -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <button class="nav-link nav-btn active px-3" data-target="section-a">
+                            <i class="bi bi-stars me-1"></i> 1. The Universe
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link nav-btn px-3" data-target="section-b">
+                            <i class="bi bi-diagram-3 me-1"></i> 2. The Process
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link nav-btn px-3" data-target="section-c">
+                            <i class="bi bi-layers me-1"></i> 3. The Middle Layer
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Right side items -->
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Dark Mode Toggle -->
+                    <div class="nav-item dropdown ms-2">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-circle-half"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" data-bs-theme-value="light"><i
+                                        class="me-2 bi bi-sun-fill"></i> Light</button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="dark"><i
+                                        class="me-2 bi bi-moon-stars-fill"></i> Dark</button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="auto"><i
+                                        class="me-2 bi bi-circle-half"></i> Auto</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECTION A: THE UNIVERSE -->
+        <section id="section-a" class="active">
+            <div class="universe-layout">
+                <!-- Sidebar Controls -->
+                <div class="universe-sidebar">
+                    <div class="sidebar-header">
+                        <i class="bi bi-sliders2 me-2"></i>
+                        Controls
+                    </div>
+
+                    <div class="control-group-vertical">
+                        <label class="form-label"><i class="bi bi-palette me-1"></i> Color By</label>
+                        <select id="color-select" class="form-select form-select-sm">
+                            <option value="frequency_bucket">Frequency (Usage Heat)</option>
+                            <option value="kpi_family">KPI Family</option>
+                            <option value="query_family">Query Family</option>
+                            <option value="primary_table">Primary Source Table</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group-vertical">
+                        <label class="form-label"><i class="bi bi-grid-3x3 me-1"></i> Layout Mode</label>
+                        <select id="layout-select" class="form-select form-select-sm">
+                            <option value="grid">Dense Grid</option>
+                            <option value="grouped">Grouped (Facet)</option>
+                            <option value="scatter">Scatter (Complexity vs Freq)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group-vertical">
+                        <label class="form-label"><i class="bi bi-sort-down me-1"></i> Sort By</label>
+                        <select id="sort-select" class="form-select form-select-sm">
+                            <option value="none">Default Order</option>
+                            <option value="execution_count">Execution Count</option>
+                            <option value="complexity_score">Complexity Score</option>
+                            <option value="num_tables">Number of Tables</option>
+                            <option value="num_kpis">Number of KPIs</option>
+                        </select>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <div class="sidebar-section-title">
+                        <i class="bi bi-list-ul me-1"></i> Values Legend
+                    </div>
+                    <div id="legend-container" class="vertical-legend"></div>
+                </div>
+
+                <!-- Main Visualization Area -->
+                <div id="universe-container">
+                    <div id="group-labels"></div>
+                    <!-- dots injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION B: THE PROCESS -->
+        <section id="section-b">
+            <div class="process-container">
+                <div class="text-center mb-4">
+                    <h2 class="display-6 mb-2">From Raw SQL to Semantic Understanding</h2>
+                    <p class="text-secondary">How we processed 1,500+ unstructured queries into a structured knowledge
+                        graph.</p>
+                </div>
+
+                <!-- Stages injected by JS -->
+                <div id="process-stages-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- SECTION C: THE MIDDLE LAYER -->
+        <section id="section-c">
+            <div class="middle-layer-layout">
+                <!-- Left: Accordion -->
+                <div class="accordion-panel" id="middle-layer-list">
+                    <!-- Items injected by JS -->
+                </div>
+
+                <!-- Right: Schema Details -->
+                <div class="schema-panel" id="schema-details">
+                    <div class="schema-placeholder text-center text-secondary p-4">
+                        <i class="bi bi-table display-4 d-block mb-3 opacity-50"></i>
+                        Select a table on the left to view its schema derivation.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="card shadow-lg">
+        <div class="tooltip-header card-header d-flex justify-content-between align-items-center py-2">
+            <h6 id="tt-id" class="mb-0 fw-bold">S0001</h6>
+            <span id="tt-freq-badge" class="badge bg-primary">High</span>
+        </div>
+        <div class="tooltip-body card-body py-2">
+            <div class="tooltip-row d-flex justify-content-between mb-1">
+                <span class="label text-secondary small">Primary Table:</span>
+                <span class="value small" id="tt-table">analytics.sales</span>
+            </div>
+            <div class="tooltip-row d-flex justify-content-between mb-1">
+                <span class="label text-secondary small">KPIs:</span>
+                <span class="value small" id="tt-kpi">revenue, tickets</span>
+            </div>
+            <div class="tooltip-row d-flex justify-content-between mb-1">
+                <span class="label text-secondary small">KPI Family:</span>
+                <span class="value small text-success" id="tt-kpi-family">Revenue</span>
+            </div>
+            <div class="tooltip-row d-flex justify-content-between mb-1">
+                <span class="label text-secondary small">Query Family:</span>
+                <span class="value small text-info" id="tt-family">Daily Monitoring</span>
+            </div>
+            <div class="tooltip-row d-flex justify-content-between mb-1">
+                <span class="label text-secondary small">Executions:</span>
+                <span class="value small" id="tt-exec">312</span>
+            </div>
+            <div class="tooltip-row d-flex justify-content-between">
+                <span class="label text-secondary small">Complexity Score:</span>
+                <span class="value small text-warning" id="tt-complexity">6</span>
+            </div>
+        </div>
+        <div class="tooltip-sql-container card-footer py-2">
+            <div class="sql-label small text-uppercase text-secondary mb-1">SQL Preview</div>
+            <pre id="tt-sql" class="mb-0 small bg-dark rounded p-2">SELECT * FROM ...</pre>
+        </div>
+    </div>
+
+    <!-- Modal for SQL Details -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <div>
+                        <h5 id="modal-title" class="modal-title mb-1">
+                            <i class="bi bi-code-square text-primary me-2"></i>Query Analysis
+                        </h5>
+                        <div id="modal-subtitle" class="small text-secondary">Basic metadata</div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" onclick="closeModal()"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Primary Metadata Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="card bg-body-secondary h-100 border-0">
+                                <div class="card-body text-center py-3">
+                                    <i class="bi bi-bar-chart-fill text-primary d-block mb-2"
+                                        style="font-size:1.5rem;"></i>
+                                    <div class="small text-uppercase text-secondary mb-1">Frequency</div>
+                                    <div id="modal-freq" class="h5 mb-0 text-primary">High</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-body-secondary h-100 border-0">
+                                <div class="card-body text-center py-3">
+                                    <i class="bi bi-table text-info d-block mb-2" style="font-size:1.5rem;"></i>
+                                    <div class="small text-uppercase text-secondary mb-1">Primary Table</div>
+                                    <div id="modal-table" class="h6 mb-0" style="word-break:break-all;">analytics.sales
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-body-secondary h-100 border-0">
+                                <div class="card-body text-center py-3">
+                                    <i class="bi bi-graph-up text-success d-block mb-2" style="font-size:1.5rem;"></i>
+                                    <div class="small text-uppercase text-secondary mb-1">KPIs</div>
+                                    <div id="modal-kpi" class="h6 mb-0 text-success">Revenue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Metadata -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="card bg-body-tertiary h-100 border-0">
+                                <div class="card-body text-center py-2">
+                                    <div class="small text-secondary">Query Family</div>
+                                    <div id="modal-family" class="fw-semibold text-info">Monitoring</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-body-tertiary h-100 border-0">
+                                <div class="card-body text-center py-2">
+                                    <div class="small text-secondary">Executions</div>
+                                    <div id="modal-exec" class="fw-semibold">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-body-tertiary h-100 border-0">
+                                <div class="card-body text-center py-2">
+                                    <div class="small text-secondary">Complexity</div>
+                                    <div id="modal-complexity" class="fw-semibold text-warning">1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SQL Block -->
+                    <div class="mb-2 d-flex justify-content-between align-items-center">
+                        <label class="form-label small text-uppercase text-secondary mb-0">
+                            <i class="bi bi-file-code me-1"></i> SQL Structure
+                        </label>
+                        <span class="badge bg-secondary small">Normalized</span>
+                    </div>
+                    <pre id="modal-sql" class="sql-block">SELECT ...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@gramex/ui@0.3.1/dist/dark-theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

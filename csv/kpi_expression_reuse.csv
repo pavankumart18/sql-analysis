@@ -1,0 +1,38 @@
+expression,count
+COUNT(DISTINCT t.ticket_id) AS tickets_sold,530
+"SUM(face_value - COALESCE(discount_amount,0)) AS net_revenue,",303
+"SUM(gross_revenue) AS gross_revenue,",284
+"COUNT(DISTINCT b.ticket_id) AS tickets,",251
+"SUM(COALESCE(s.attended_flag,0)) AS attended,",251
+"(SUM(COALESCE(s.attended_flag,0))::numeric / NULLIF(COUNT(DISTINCT b.ticket_id),0)) AS attendance_rate",251
+"SUM(face_value + COALESCE(fees,0) - COALESCE(discount_amount,0)) AS gross_revenue,",246
+"SUM(face_value - COALESCE(discount_amount,0) + COALESCE(fees,0)) AS net_revenue,",227
+"MAX(CASE WHEN event_type = 'PAGE_VIEW' THEN 1 ELSE 0 END) AS saw_page,",219
+"MAX(CASE WHEN event_type = 'CHECKOUT_START' THEN 1 ELSE 0 END) AS started_checkout,",219
+MAX(CASE WHEN event_type = 'PURCHASE' THEN 1 ELSE 0 END) AS purchased,219
+"COUNT(*) AS sessions,",219
+"SUM(saw_page) AS sessions_with_page,",219
+"SUM(started_checkout) AS sessions_with_checkout,",219
+"SUM(purchased) AS sessions_with_purchase,",219
+"(SUM(purchased)::numeric / NULLIF(COUNT(*),0)) AS session_conversion_rate",219
+"COUNT(*) AS tickets,",119
+"SUM(CASE WHEN COALESCE(refunded_flag,false) THEN 1 ELSE 0 END) AS refunded_tickets,",119
+"(SUM(CASE WHEN COALESCE(refunded_flag,false) THEN 1 ELSE 0 END)::numeric / NULLIF(COUNT(*),0)) AS refund_rate",119
+HAVING COUNT(*) >= 50,119
+"COUNT(DISTINCT tickets.ticket_id) AS tickets_sold,",99
+"COUNT(DISTINCT attached.ticket_id) AS tickets_with_merch,",99
+"(COUNT(DISTINCT attached.ticket_id)::numeric / NULLIF(COUNT(DISTINCT tickets.ticket_id),0)) AS merch_attach_rate",99
+"COUNT(*) AS resolved_tickets,",96
+"AVG(resolution_hours) AS avg_resolution_hours,",96
+MAX(t.touch_ts) AS last_touch_ts,81
+"COUNT(DISTINCT p.ticket_id) AS attributed_tickets,",81
+SUM(p.net_revenue_excl_fees) AS attributed_net_revenue,81
+PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY resolution_hours) AS p90_resolution_hours,81
+"COUNT(*) AS deals_created,",66
+SUM(amount) AS pipeline_amount,66
+"MAX(ts) AS last_activity_ts,",39
+"COUNT(*) AS txn_count,",39
+SUM(value) AS total_value,39
+"COUNT(*) AS customers,",39
+AVG(total_value) AS avg_value,39
+PERCENTILE_CONT(0.9) WITHIN GROUP (-- sanity-check filters,15

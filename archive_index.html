@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Query Universe - SandDance Style</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- D3.js for SandDance-style visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>SQL Query Universe</h1>
+        <div class="header-info">
+            <a href="section_b_process.html" class="process-btn" target="_blank">View Analysis Process</a>
+            <span id="query-count">1,500 queries</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="control-section">
+                <h3>Color Encoding</h3>
+                <select id="color-encoding" class="control-select">
+                    <option value="frequency_bucket" selected>Frequency Bucket</option>
+                    <option value="kpi_family">KPI Family</option>
+                    <option value="primary_table">Primary Table</option>
+                </select>
+            </div>
+            
+            <div class="control-section">
+                <h3>Layout Style</h3>
+                <select id="layout-type" class="control-select">
+                    <option value="grid" selected>Dense Grid (SandDance)</option>
+                    <option value="scatter">Scatter</option>
+                    <option value="facet">Faceted</option>
+                </select>
+            </div>
+            
+            <div class="control-section">
+                <h3>Sort</h3>
+                <select id="sort-by" class="control-select">
+                    <option value="none">Natural</option>
+                    <option value="execution_count">By Execution</option>
+                    <option value="num_kpis">By KPIs</option>
+                </select>
+            </div>
+            
+            <div class="info-section">
+                <h3>About</h3>
+                <p class="info-text">
+                    <strong>1,500 SQL queries</strong> displayed as dense colored squares.
+                    Each square = one unique query. All queries always visible.
+                </p>
+                <p class="info-text">
+                    <strong>✨ Smooth Animation:</strong> Squares flow elegantly 
+                    when you change settings - watch them move!
+                </p>
+                <p class="info-text" style="color: #667eea; font-weight: 600; margin-top: 15px;">
+                    🎨 True SandDance-style visualization with D3.js!
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <a href="section_b_process.html" target="_blank" class="process-link-btn">
+                    📊 View Analysis Process
+                </a>
+                <p class="info-text" style="margin-top: 10px; font-size: 10px; color: #999;">
+                    Learn how 1,500 SQL queries are analyzed
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <a href="section_c_middle_layer.html" target="_blank" class="process-link-btn" style="background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);">
+                    🏗️ View Middle Layer
+                </a>
+                <p class="info-text" style="margin-top: 10px; font-size: 10px; color: #999;">
+                    See the usage-derived middle layer
+                </p>
+            </div>
+        </div>
+        
+        <div class="visualization-area">
+            <svg id="sanddance-viz"></svg>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
